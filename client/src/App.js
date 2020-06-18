@@ -7,7 +7,11 @@ function App() {
     <div className='App'>
       <h1>Welcome to the Redify App</h1>
       <h3>Some Artist Tracks We'll Be Showcasing</h3>
-      <div>{TrackData.map((track) => <div>{track.title}</div>)}</div>
+      <div>
+        {TrackData.map((track) => (
+          <div>{track.title}</div>
+        ))}
+      </div>
     </div>
   );
 }
