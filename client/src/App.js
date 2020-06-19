@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import TrackData from './data/track-data';
+
+import LikedSongsPage from './pages/likedSongs/likedSongs.component';
 
 function App() {
   return (
@@ -8,9 +9,7 @@ function App() {
       <h1>Welcome to the Redify App</h1>
       <h3>Some Artist Tracks We'll Be Showcasing</h3>
       <div>
-        {TrackData.map((track) => (
-          <div>{track.title}</div>
-        ))}
+        <LikedSongsPage />
       </div>
     </div>
   );
