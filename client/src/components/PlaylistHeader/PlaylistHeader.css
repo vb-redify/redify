@@ -1,0 +1,36 @@
+.playlist-header-container {
+  display: grid;
+  height: 25vh;
+  min-height: 300px;
+  grid-template-columns: 30% auto;
+}
+
+.playlist-header-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin: auto auto;
+}
+
+.playlist-header-details-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid black;
+}
+
+.playlist-header-headline {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.playlist-header-title {
+  font-size: 4rem;
+}
