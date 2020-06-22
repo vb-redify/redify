@@ -19,11 +19,12 @@
     "build": "cd client && npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js"
-  },  
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
