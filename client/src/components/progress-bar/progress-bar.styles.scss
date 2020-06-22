@@ -1,0 +1,20 @@
+.bar-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 15px;
+
+  .progress-bar {
+    display: flex;
+    align-self: center;
+    width: 80%;
+    height: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  p {
+    margin: 0;
+    font-size: small;
+  }
+}

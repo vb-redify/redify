@@ -1,7 +1,9 @@
 import React from 'react';
-import './App.css';
 
 import LikedSongsPage from './pages/likedSongs/likedSongs.component';
+import Player from './components/player/player.component';
+
+import './App.scss';
 
 const App = () => (
   <div className="App">
@@ -9,6 +11,7 @@ const App = () => (
     <div>
       <LikedSongsPage />
     </div>
+    <Player />
   </div>
 );
 
