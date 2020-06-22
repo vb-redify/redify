@@ -3,6 +3,8 @@
   height: 25vh;
   min-height: 300px;
   grid-template-columns: 30% auto;
+  background-color: #333138;
+  color: white;
 }
 
 .playlist-header-image-container {
