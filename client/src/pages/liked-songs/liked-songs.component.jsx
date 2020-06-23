@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useSelector } from 'react-redux';
 
-import PlaylistHeader from '../../components/PlaylistHeader/PlaylistHeader.component';
+import PlaylistHeader from '../../components/playlist-header/playlist-header.component';
 
 const LikedSongsPage = () => {
   const likedSongsList = useSelector(

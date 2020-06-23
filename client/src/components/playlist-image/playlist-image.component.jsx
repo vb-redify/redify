@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import heart from '../../assets/icons/heart.svg';
-import './PlaylistImage.styles.css';
+import './playlist-image.styles.css';
 
 const PlaylistImage = ({ title, imageUrl }) => (
   <div className="playlist-header-image-container">
@@ -22,7 +22,7 @@ PlaylistImage.propTypes = {
 };
 PlaylistImage.defaultProps = {
   title: undefined,
-  imageUrl: undefined
+  imageUrl: undefined,
 };
 
 export default PlaylistImage;
