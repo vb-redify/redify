@@ -1,5 +1,7 @@
 .App {
+  display: grid;
   text-align: center;
   height: 100vh;
   position: relative;
+  grid-template-rows: 85vh 15vh;
 }

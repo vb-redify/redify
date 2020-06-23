@@ -1,0 +1,13 @@
+.playlist-list-container {
+  display: grid;
+}
+
+.song-container {
+  height: 50px;
+  background-color: black;
+}
+
+.song-container:hover {
+  height: 50px;
+  background-color: #45424c;
+}

@@ -5,7 +5,7 @@ import heart from '../../assets/icons/heart.svg';
 import './playlist-image.styles.css';
 
 const PlaylistImage = ({ title, imageUrl }) => (
-  <div className="playlist-header-image-container">
+  <div className="playlist-image-container">
     {title !== undefined && imageUrl !== undefined ? (
       <div>
         <img className="playlist-image" src={imageUrl} alt="Playlist" />
