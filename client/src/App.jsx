@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LikedSongsPage from './pages/likedSongs/likedSongs.component';
+import LikedSongsPage from './pages/liked-songs/liked-songs.component';
 import Player from './components/player/player.component';
 
 import './App.scss';

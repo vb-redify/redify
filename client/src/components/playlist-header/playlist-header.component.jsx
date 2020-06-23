@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import PlaylistImage from '../PlaylistImage/PlaylistImage.component';
+import PlaylistImage from '../playlist-image/playlist-image.component';
 
-import './PlaylistHeader.styles.css';
+import './playlist-header.styles.css';
 
 const PlaylistHeader = ({ children }) => (
   <div className="playlist-header-container">
