@@ -8,13 +8,11 @@ const PlaylistList = () => {
   );
   return (
     <div className="playlist-list-container">
-      <div className="">
-        {likedSongsList.map((song) => (
-          <div key={song.id} className="song-container">
-            {song.title}
-          </div>
-        ))}
-      </div>
+      {likedSongsList.map((song) => (
+        <div key={song.id} className="song-container">
+          {song.title}
+        </div>
+      ))}
     </div>
   );
 };

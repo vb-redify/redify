@@ -1,13 +1,21 @@
 .playlist-list-container {
   display: grid;
+  padding: 0px 25px;
 }
 
 .song-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   height: 50px;
-  background-color: 4f4c57;
+  background-color: #4f4c57;
+  color: white;
 }
 
 .song-container:hover {
   height: 50px;
-  background-color: #45424c;
+  background-color: #7F7C8D;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
