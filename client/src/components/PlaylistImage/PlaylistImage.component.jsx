@@ -22,7 +22,7 @@ PlaylistImage.propTypes = {
 };
 PlaylistImage.defaultProps = {
   title: undefined,
-  imageUrl: undefined
+  imageUrl: undefined,
 };
 
 export default PlaylistImage;

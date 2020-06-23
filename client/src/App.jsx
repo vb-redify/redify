@@ -7,10 +7,7 @@ import './App.scss';
 
 const App = () => (
   <div className="App">
-    <h1>Welcome to the Redify App</h1>
-    <div>
-      <LikedSongsPage />
-    </div>
+    <LikedSongsPage />
     <Player />
   </div>
 );
