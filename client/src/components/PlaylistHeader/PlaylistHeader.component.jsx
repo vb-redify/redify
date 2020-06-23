@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import PlaylistImage from '../PlaylistImage/PlaylistImage.component';
+
 import './PlaylistHeader.styles.css';
 
 const PlaylistHeader = ({ children }) => (
   <div className="playlist-header-container">
-    <div className="playlist-header-image-container">This is the image</div>
+    <PlaylistImage />
     <div className="playlist-header-details-container">
       <div className="playlist-header-headline">Playlist</div>
       <div className="playlist-header-title">{children}</div>
