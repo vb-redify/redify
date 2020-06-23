@@ -7,27 +7,46 @@ const PlaylistDuration = () => {
     ({ likedSongs: { likedSongs } }) => likedSongs
   );
 
-  const totalSeconds = likedSongsList.reduce((accum, song) => {
-    return accum + song.seconds;
-  }, 0);
+  const totalSeconds = likedSongsList.reduce(
+    (accum, song) => accum + song.seconds,
+    0,
+  );
 
-  let totalMinutes = likedSongsList.reduce((accum, song) => {
-    return accum + song.minutes;
-  }, 0);
+  let totalMinutes = likedSongsList.reduce(
+    (accum, song) => accum + song.minutes,
+    0,
+  );
+  const extraMinutes = Math.floor(totalSeconds / 60);
+  totalMinutes += extraMinutes;
 
-  const extraMins = Math.floor(totalSeconds / 60);
-  totalMinutes += extraMins;
+  let remainingMinutes = 0;
+  let totalHours = 0;
+
+  if (totalMinutes >= 60) {
+    totalHours += Math.floor(totalMinutes / 60);
+    remainingMinutes = totalMinutes % 60;
+    totalMinutes = remainingMinutes;
+  }
 
   const remainingSeconds = totalSeconds % 60;
 
-  console.log(totalMinutes, remainingSeconds);
-
   return (
     <div>
-      {totalMinutes}
-      <span> min</span>
-      {remainingSeconds}
-      <span> secs</span>
+      {totalHours > 0 ? (
+        <div>
+          {totalHours}
+          <span>{totalHours > 1 ? ' hrs ' : ' hr '}</span>
+          {totalMinutes}
+          <span>{totalMinutes > 1 ? ' mins' : ' min'}</span>
+        </div>
+      ) : (
+        <div>
+          {totalMinutes}
+          <span>{totalMinutes > 1 ? ' mins ' : ' min'}</span>
+          {remainingSeconds}
+          <span>{remainingSeconds > 1 ? ' secs' : ' sec'}</span>
+        </div>
+      )}
     </div>
   );
 };
