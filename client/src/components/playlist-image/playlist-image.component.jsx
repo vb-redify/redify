@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import heart from '../../assets/icons/heart.svg';
 import './playlist-image.styles.css';
 
 const PlaylistImage = ({ title, imageUrl }) => (
@@ -11,7 +10,9 @@ const PlaylistImage = ({ title, imageUrl }) => (
         <img className="playlist-image" src={imageUrl} alt="Playlist" />
       </div>
     ) : (
-      <div className="playlist-liked-songs"><img src={heart} alt="Heart" /></div>
+      <div className="playlist-liked-songs">
+        <img src="./images/heart.svg" alt="Heart" />
+      </div>
     )}
   </div>
 );

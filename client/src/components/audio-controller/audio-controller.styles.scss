@@ -1,5 +1,24 @@
 .audio-controller-container {
   width: 45%;
-  display: flex;
-  align-items: flex-end;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+.music-controls-container {
+  display: grid;
+  grid-row-start: 2;
+  grid-template-columns: 2fr 1fr 2fr;
+
+  .button-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    grid-column-start: 2;
+    align-items: flex-end;
+
+    div:nth-child(3) {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
