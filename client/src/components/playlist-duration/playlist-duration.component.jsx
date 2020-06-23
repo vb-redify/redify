@@ -4,7 +4,7 @@ import './playlist-duration.styles.css';
 
 const PlaylistDuration = () => {
   const likedSongsList = useSelector(
-    ({ likedSongs: { likedSongs } }) => likedSongs
+    ({ likedSongs: { likedSongs } }) => likedSongs,
   );
 
   const totalSeconds = likedSongsList.reduce(
@@ -31,7 +31,7 @@ const PlaylistDuration = () => {
   const remainingSeconds = totalSeconds % 60;
 
   return (
-    <div>
+    <div className="playlist-duration-container">
       {totalHours > 0 ? (
         <div>
           {totalHours}
