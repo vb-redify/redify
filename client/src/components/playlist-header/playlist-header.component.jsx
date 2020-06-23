@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PlaylistImage from '../playlist-image/playlist-image.component';
+import PlaylistDuration from '../playlist-duration/playlist-duration.component';
 
 import './playlist-header.styles.css';
 
@@ -11,7 +12,7 @@ const PlaylistHeader = ({ children }) => (
     <div className="playlist-header-details-container">
       <div className="playlist-header-headline">Playlist</div>
       <div className="playlist-header-title">{children}</div>
-      <div>The duration of all songs</div>
+      <PlaylistDuration />
     </div>
   </div>
 );
