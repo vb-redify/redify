@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Song from '../song/song.component';
 import './playlist-list.styles.css';
 
 const PlaylistList = () => {
@@ -9,9 +10,7 @@ const PlaylistList = () => {
   return (
     <div className="playlist-list-container">
       {likedSongsList.map((song) => (
-        <div key={song.id} className="song-container">
-          {song.title}
-        </div>
+        <Song key={song.id} song={song} />
       ))}
     </div>
   );
