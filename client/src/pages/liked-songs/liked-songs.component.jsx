@@ -1,21 +1,14 @@
 import * as React from 'react';
-import { useSelector } from 'react-redux';
 
 import PlaylistHeader from '../../components/playlist-header/playlist-header.component';
+import PlaylistList from '../../components/playlist-list/playlist-list.component';
+import './liked-songs.styles.css';
 
-const LikedSongsPage = () => {
-  const likedSongsList = useSelector(
-    ({ likedSongs: { likedSongs } }) => likedSongs,
-  );
-
-  return (
-    <div>
-      <PlaylistHeader>Liked Songs</PlaylistHeader>
-      {likedSongsList.map((song) => (
-        <div key={song.id}>{song.title}</div>
-      ))}
-    </div>
-  );
-};
+const LikedSongsPage = () => (
+  <div className="liked-songs-container">
+    <PlaylistHeader>Liked Songs</PlaylistHeader>
+    <PlaylistList />
+  </div>
+);
 
 export default LikedSongsPage;
