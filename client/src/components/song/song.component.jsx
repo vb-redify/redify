@@ -17,9 +17,9 @@ const Song = ({ song }) => {
         <img src={`./images/${songImage}.svg`} alt={`${songImage}`} />
       </div>
       <div className="song-details">
-        <div>{song.title}</div>
+        <div className="song-title">{song.title}</div>
         <div className="song-artist-album">
-          {song.explicit}
+          {song.explicit ? <div className="song-explicit">E</div> : null}
           {song.artist}
           <span> &middot; </span>
           {song.album}

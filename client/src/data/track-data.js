@@ -51,6 +51,16 @@ const TRACKDATA = [
     false,
     'https://img.discogs.com/vH05IfFzpjrcrZrodB57cyFRUWI=/fit-in/600x533/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-855636-1370211059-9123.jpeg.jpg',
   ),
+  new Track(
+    '6',
+    'Without Me',
+    'Manic',
+    'Halsey',
+    3,
+    21,
+    true,
+    'https://img.discogs.com/OdG78jUpy7tptftTs5xR_JolRIY=/fit-in/600x538/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-14679075-1579533162-7714.jpeg.jpg',
+  ),
 ];
 
 export default TRACKDATA;
