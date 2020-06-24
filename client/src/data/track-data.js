@@ -24,7 +24,7 @@ const TRACKDATA = [
   new Track(
     '3',
     'Old Pine',
-    'Every Kingdonm',
+    'Every Kingdom',
     'Ben Howard',
     5,
     29,

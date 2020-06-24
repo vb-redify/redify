@@ -2,22 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import './song.styles.css';
 
-  // const [songImage, setSongImage] = useState('music');
-
-  // return (
-    // <div
-      // className="song-container"
-      // onMouseOver={() => setSongImage('play')}
-      // onFocus={() => setSongImage('play')}
-      // onMouseOut={() => setSongImage('music')}
-      // onBlur={() => setSongImage('music')}
-    // >
-      // <div className="song-play">
-        {/* <img src={`./images/${songImage}.svg`} alt="Play" /> */}
-      {/* </div> */}
-
 const Song = ({ song }) => {
   const [songImage, setSongImage] = React.useState('music');
+  const seconds = song.seconds.toString().padStart(2, '0');
   return (
     <div
       className="song-container"
@@ -41,7 +28,7 @@ const Song = ({ song }) => {
       <div>
         {song.minutes}
         :
-        {song.seconds}
+        {seconds}
       </div>
     </div>
   );
