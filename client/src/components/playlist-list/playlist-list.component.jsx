@@ -5,7 +5,7 @@ import './playlist-list.styles.css';
 
 const PlaylistList = () => {
   const likedSongsList = useSelector(
-    ({ likedSongs: { likedSongs } }) => likedSongs
+    ({ likedSongs: { likedSongs } }) => likedSongs,
   );
   return (
     <div className="playlist-list-container">
