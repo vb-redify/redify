@@ -36,14 +36,14 @@ const Song = ({ song }) => {
 
 Song.propTypes = {
   song: PropTypes.shape({
-    id: String,
-    title: String,
-    album: String,
-    artist: String,
-    minutes: Number,
-    seconds: Number,
-    explicit: Boolean,
-    imageUrl: String,
+    id: PropTypes.string,
+    title: PropTypes.string,
+    album: PropTypes.string,
+    artist: PropTypes.string,
+    minutes: PropTypes.number,
+    seconds: PropTypes.number,
+    explicit: PropTypes.bool,
+    imageUrl: PropTypes.string,
   }).isRequired,
 };
 
