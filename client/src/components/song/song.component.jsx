@@ -4,21 +4,20 @@ import './song.styles.css';
 
 const Song = ({ song }) => (
   <div className="song-container">
-    <div>Play</div>
+    <div className="song-play">
+      <img src="./images/music.svg" alt="Play" />
+    </div>
     <div className="song-details">
       <div>{song.title}</div>
-      <div>
+      <div className="song-artist-album">
         {song.explicit}
-        -
         {song.artist}
-        -
+        <span> &middot; </span>
         {song.album}
       </div>
     </div>
     <div>
-      {song.minutes}
-      :
-      {song.seconds}
+      {song.minutes}:{song.seconds}
     </div>
   </div>
 );
