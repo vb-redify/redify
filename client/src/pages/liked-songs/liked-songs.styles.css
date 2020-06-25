@@ -1,4 +1,20 @@
 .liked-songs-container {
   background-color: #333138;
-  overflow: scroll;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  margin-right: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(127, 124, 141, .8);
+  border-radius: 10px;
+  border: 1px solid rgb(0,0,0);
 }
