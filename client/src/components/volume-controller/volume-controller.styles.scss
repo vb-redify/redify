@@ -1,0 +1,10 @@
+.volume-container {
+  display: flex;
+  justify-content: flex-end;
+
+  .audio-button {
+    margin: 5px;
+
+    padding-bottom: 3px;
+  }
+}

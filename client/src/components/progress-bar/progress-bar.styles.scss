@@ -1,20 +1,35 @@
-.bar-container {
-  display: grid;
-  grid-row-start: 3;
-  grid-template-columns: 1fr 8fr 1fr;
-  padding-bottom: 15px;
-  justify-items: center;
+.progress-bar-container {
+  width: 100%;
+}
+
+.volume-bar-container {
+  display: flex;
   align-items: center;
+  margin-right: 15px;
 
-  .progress-bar {
-    width: 100%;
-    height: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-  }
+  .audio-button {
+    width: 15px;
+    height: 15px;
+    padding-bottom: 3px;
 
-  p {
-    margin: 0;
-    font-size: small;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
   }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #515052;
+}
+
+.volume-bar {
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #515052;
 }

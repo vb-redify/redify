@@ -1,13 +1,14 @@
 .collection-item-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.5fr 0.75fr 1fr;
+  column-gap: 10px;
   align-items: center;
-  width: 30%;
-  height: 100%;
+  justify-items: center;
+  margin-left: 15px;
 
   .collection-thumbnail {
-    width: 75px;
     height: 75px;
-    padding-left: 15px;
+    width: 75px;
 
     img {
       width: 100%;
@@ -18,16 +19,48 @@
   .song-details {
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
+    margin-right: auto;
 
     p {
       margin: 0;
       text-align: start;
+      color: #b3b3b3;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150px;
     }
 
     p:first-child {
+      font-size: 16px;
       margin-bottom: 5px;
       font-weight: bold;
+      color: #fffffa;
+    }
+
+    p:hover {
+      cursor: pointer;
+      color: #fffffa;
+      text-decoration: underline;
+    }
+  }
+
+  .collection-icon {
+    margin-right: auto;
+    width: 20px;
+    height: 20px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #ff312e;
+      color: #ff312e;
+    }
+
+    :hover {
+      cursor: pointer;
+      filter: brightness(150%);
     }
   }
 }
