@@ -1,24 +1,49 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import './song.styles.css';
 
-const Song = ({ song }) => (
-  <div className='song-container'>
-    <div>Play</div>
-    <div className='song-details'>
-      <div>{song.title}</div>
+const Song = ({ song }) => {
+  const [songImage, setSongImage] = React.useState('music');
+  const seconds = song.seconds.toString().padStart(2, '0');
+  return (
+    <div
+      className="song-container"
+      onMouseOver={() => setSongImage('play2')}
+      onFocus={() => setSongImage('play2')}
+      onMouseOut={() => setSongImage('music')}
+      onBlur={() => setSongImage('music')}
+    >
+      <div className="song-play">
+        <img src={`./images/${songImage}.svg`} alt={`${songImage}`} />
+      </div>
+      <div className="song-details">
+        <div className="song-title">{song.title}</div>
+        <div className="song-artist-album">
+          {song.explicit ? <div className="song-explicit">E</div> : null}
+          {song.artist}
+          <span> &middot; </span>
+          {song.album}
+        </div>
+      </div>
       <div>
-        {song.explicit} - {song.artist} - {song.album}
+        {song.minutes}
+        :
+        {seconds}
       </div>
     </div>
-    <div>{song.minutes}:{song.seconds}</div>
-  </div>
-);
+  );
+};
 
 Song.propTypes = {
   song: PropTypes.shape({
-    id: String,
-    title: String,
+    id: PropTypes.string,
+    title: PropTypes.string,
+    album: PropTypes.string,
+    artist: PropTypes.string,
+    minutes: PropTypes.number,
+    seconds: PropTypes.number,
+    explicit: PropTypes.bool,
+    imageUrl: PropTypes.string,
   }).isRequired,
 };
 

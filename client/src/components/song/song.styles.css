@@ -1,15 +1,47 @@
 .song-container {
   display: grid;
+  align-items: center;
   grid-template-columns: 50px auto 50px;
-  height: 50px;
+  height: 65px;
   background-color: #333138;
   color: white;
   padding: 0px 7px;
 }
 
 .song-container:hover {
-  height: 50px;
   background-color: #7F7C8D;
+}
+
+.song-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-title {
+  padding-bottom: 3px;
+}
+
+.song-artist-album {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: .8rem;
+  padding-top: 3px;
+}
+
+.song-explicit {
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  font-size: .6rem;
+  border-radius: 2px;
+  margin-right: 4px;
+  padding: 2px
 }
 
 .song-container .song-details {
