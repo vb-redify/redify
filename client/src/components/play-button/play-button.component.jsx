@@ -1,5 +1,5 @@
 import React from 'react';
-import './playlist-player.styles.css';
+import './play-button.styles.css';
 
 const PlaylistPlayer = () => (
   <div>
