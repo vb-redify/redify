@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 
+import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
+
 import './collection-item.styles.scss';
 
 const CollectionItem = ({ currentSong: { artist, imageUrl, title } }) => (
@@ -11,11 +13,11 @@ const CollectionItem = ({ currentSong: { artist, imageUrl, title } }) => (
       <img src={imageUrl} alt="music album" />
     </div>
     <div className="song-details">
-      <p>
-        {title}
-        &nbsp; &#9825;
-      </p>
+      <p>{title}</p>
       <p>{artist}</p>
+    </div>
+    <div className="collection-icon">
+      <HeartIcon />
     </div>
   </div>
 );

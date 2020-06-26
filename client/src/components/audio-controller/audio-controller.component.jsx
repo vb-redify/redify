@@ -6,7 +6,7 @@ import AudioButton from '../audio-button/audio-button.component';
 import './audio-controller.styles.scss';
 
 const AudioController = () => {
-  const buttons = ['shuffle', 'previous', 'play', 'next', 'repeat'];
+  const buttons = ['Shuffle', 'Previous', 'Play', 'Next', 'Repeat'];
 
   return (
     <div className="audio-controller-container">
@@ -17,7 +17,11 @@ const AudioController = () => {
           ))}
         </div>
       </div>
-      <ProgressBar />
+      <div className="progress-time-container">
+        <p>0:00</p>
+        <ProgressBar />
+        <p>4:16</p>
+      </div>
     </div>
   );
 };

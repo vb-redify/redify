@@ -1,5 +1,4 @@
 .audio-controller-container {
-  width: 45%;
   display: grid;
   grid-template-rows: 1fr 2fr 2fr;
 }
@@ -20,5 +19,19 @@
       width: 30px;
       height: 30px;
     }
+  }
+}
+
+.progress-time-container {
+  display: grid;
+  grid-row-start: 3;
+  grid-template-columns: 1fr 8fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  p {
+    margin: 0;
+    font-size: small;
+    color: #b3b3b3;
   }
 }
