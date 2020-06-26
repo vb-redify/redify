@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import getSeconds from './playlist-duration.util';
 import './playlist-duration.styles.css';
 
 const PlaylistDuration = () => {
@@ -7,10 +8,7 @@ const PlaylistDuration = () => {
     ({ likedSongs: { likedSongs } }) => likedSongs,
   );
 
-  const totalSeconds = likedSongsList.reduce(
-    (accum, song) => accum + song.seconds,
-    0,
-  );
+  const totalSeconds = getSeconds(likedSongsList);
 
   let totalMinutes = likedSongsList.reduce(
     (accum, song) => accum + song.minutes,
