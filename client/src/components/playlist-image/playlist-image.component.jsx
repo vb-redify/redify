@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './playlist-image.styles.css';
+import './playlist-image.styles.scss';
 
 const PlaylistImage = ({ title, imageUrl }) => (
   <div className="playlist-image-container">

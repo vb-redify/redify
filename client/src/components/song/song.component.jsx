@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import './song.styles.css';
+import './song.styles.scss';
 
 const Song = ({ song }) => {
   const [songImage, setSongImage] = React.useState('music');
