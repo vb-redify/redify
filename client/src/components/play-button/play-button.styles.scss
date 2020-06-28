@@ -1,10 +1,13 @@
 .play-button-container {
   display: flex;
   justify-content: flex-start;
-  margin: 20px 0px 20px 30px;
+  align-items: center;
+  margin: 15px 0px 15px 20px;
+  height: 60px;
 }
 
 .play-image-container {
+  margin-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,9 +15,21 @@
   height: 40px;
   border-radius: 50px;
   border: 1px solid white;
+  transition: .5s, .5s;
+}
+
+.play-image-container:hover {
+  transform: scale(1.1);
+  transition: .5s, .5s;
 }
 
 .play-image-container .play-image {
   width: 18px;
   height: 18px;
+  transition: .5s, .5s;
+}
+
+.play-image-container:hover .play-image {
+  transform: scale(1.1);
+  transition: .5s, .5s;
 }

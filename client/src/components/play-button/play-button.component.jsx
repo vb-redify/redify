@@ -1,5 +1,5 @@
 import React from 'react';
-import './play-button.styles.css';
+import './play-button.styles.scss';
 
 const PlaylistPlayer = () => (
   <div className="play-button-container">
