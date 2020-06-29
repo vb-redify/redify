@@ -14,21 +14,19 @@
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  border: 1px solid white;
-  transition: .5s, .5s;
+  background-color: white;
+  transition: all .2s ease-in-out;
 }
 
 .play-image-container:hover {
   transform: scale(1.1);
-  transition: .5s, .5s;
 }
 
 .play-image-container .play-image {
   margin-left: 3px;
-  transition: .5s, .5s;
+  transition: all .2s ease-in-out;
 }
 
 .play-image-container:hover .play-image {
   transform: scale(1.1);
-  transition: .5s, .5s;
 }

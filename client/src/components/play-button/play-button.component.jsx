@@ -3,10 +3,10 @@ import './play-button.styles.scss';
 import { ReactComponent as Play } from '../../assets/icons/play.svg';
 
 const styles = {
-  height: '28px',
-  width: '28px',
-  fill: 'white',
-  stroke: 'white',
+  height: '22px',
+  width: '22px',
+  fill: '#333138',
+  stroke: 'none',
 };
 
 const PlaylistPlayer = () => (
