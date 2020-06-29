@@ -1,4 +1,6 @@
 .liked-songs-container {
+  display: flex;
+  flex-direction: column;
   background-color: #333138;
   overflow-y: auto;
 }
