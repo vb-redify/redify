@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import PlaylistImage from '../playlist-image/playlist-image.component';
 import PlaylistDuration from '../playlist-duration/playlist-duration.component';
 

@@ -3,14 +3,14 @@
   align-items: center;
   grid-template-columns: 50px auto 50px;
   height: 65px;
-  background-color: #333138;
+  background-color: black;
   color: white;
   padding: 0px 7px;
-  transition: all .5s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .song-container:hover {
-  background-color: #7F7C8D;
+  background-color: rgba(127,124,141,0.5);
 }
 
 .song-play {
