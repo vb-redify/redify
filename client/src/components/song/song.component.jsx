@@ -36,9 +36,9 @@ const Song = ({ song }) => {
         <div className="song-title">{song.title}</div>
         <div className="song-artist-album">
           {song.explicit ? <div className="song-explicit">E</div> : null}
-          {song.artist}
-          <span> &middot; </span>
-          {song.album}
+          <div>{song.artist}</div>
+          <div id="spacer-dot">&middot;</div>
+          <div>{song.album}</div>
         </div>
       </div>
       <div>

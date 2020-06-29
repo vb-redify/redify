@@ -24,6 +24,12 @@
   width: 18px;
 }
 
+.song-container .song-details {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  text-align: left;
+}
+
 .song-title {
   padding-bottom: 3px;
 }
@@ -50,8 +56,7 @@
   padding: 2px
 }
 
-.song-container .song-details {
-  display: grid;
-  grid-template-rows: 50% 50%;
-  text-align: left;
+#spacer-dot {
+  font-weight: 900;
+  padding: 0px 3px;
 }
