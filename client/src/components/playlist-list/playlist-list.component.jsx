@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Song from '../song/song.component';
-import './playlist-list.styles.css';
+import './playlist-list.styles.scss';
 
 const PlaylistList = () => {
   const likedSongsList = useSelector(

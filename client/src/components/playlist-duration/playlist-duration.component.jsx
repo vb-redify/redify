@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import getTime from './playlist-duration.util';
-import './playlist-duration.styles.css';
+import './playlist-duration.styles.scss';
 
 const PlaylistDuration = () => {
   const likedSongsList = useSelector(

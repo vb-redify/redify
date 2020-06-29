@@ -3,19 +3,31 @@
   align-items: center;
   grid-template-columns: 50px auto 50px;
   height: 65px;
-  background-color: #333138;
+  background-color: black;
   color: white;
   padding: 0px 7px;
+  transition: all .2s ease-in-out;
 }
 
 .song-container:hover {
-  background-color: #7F7C8D;
+  background-color: rgba(127,124,141,0.5);
 }
 
 .song-play {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.song-play .play-button {
+  height: 18px;
+  width: 18px;
+}
+
+.song-container .song-details {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  text-align: left;
 }
 
 .song-title {
@@ -44,8 +56,7 @@
   padding: 2px
 }
 
-.song-container .song-details {
-  display: grid;
-  grid-template-rows: 50% 50%;
-  text-align: left;
+#spacer-dot {
+  font-weight: 900;
+  padding: 0px 3px;
 }

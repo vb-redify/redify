@@ -1,28 +1,44 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import './song.styles.css';
+import './song.styles.scss';
+import { ReactComponent as Play } from '../../assets/icons/play.svg';
+import { ReactComponent as Music } from '../../assets/icons/music.svg';
 
 const Song = ({ song }) => {
   const [songImage, setSongImage] = React.useState('music');
   const seconds = song.seconds.toString().padStart(2, '0');
+
+  const styles = {
+    music: {
+      height: '18px',
+      width: '18px',
+    },
+    play: {
+      height: '18px',
+      width: '18px',
+      fill: 'white',
+      stroke: 'white',
+    },
+  };
+
   return (
     <div
       className="song-container"
-      onMouseOver={() => setSongImage('play2')}
-      onFocus={() => setSongImage('play2')}
+      onMouseOver={() => setSongImage('play')}
+      onFocus={() => setSongImage('play')}
       onMouseOut={() => setSongImage('music')}
       onBlur={() => setSongImage('music')}
     >
       <div className="song-play">
-        <img src={`./images/${songImage}.svg`} alt={`${songImage}`} />
+        {songImage === 'music' ? <Music style={styles.music} /> : <Play style={styles.play} />}
       </div>
       <div className="song-details">
         <div className="song-title">{song.title}</div>
         <div className="song-artist-album">
           {song.explicit ? <div className="song-explicit">E</div> : null}
-          {song.artist}
-          <span> &middot; </span>
-          {song.album}
+          <div>{song.artist}</div>
+          <div id="spacer-dot">&middot;</div>
+          <div>{song.album}</div>
         </div>
       </div>
       <div>
