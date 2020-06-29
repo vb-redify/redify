@@ -17,6 +17,7 @@ const Song = ({ song }) => {
       height: '18px',
       width: '18px',
       fill: 'white',
+      stroke: 'white',
     },
   };
 
