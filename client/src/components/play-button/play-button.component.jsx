@@ -1,10 +1,11 @@
 import React from 'react';
 import './play-button.styles.scss';
+import { ReactComponent as Play } from '../../assets/icons/play2.svg';
 
 const PlaylistPlayer = () => (
   <div className="play-button-container">
     <div className="play-image-container">
-      <img className="play-image" src="./images/play2.svg" alt="Play Playlist" />
+      <Play />
     </div>
   </div>
 );
