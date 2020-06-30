@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateTime } from '../../redux/likedSongs/likedSongs.actions';
 
-import { selectButton } from './audio-button.util';
+import selectButton from './audio-button.util';
 
 import './audio-button.styles.scss';
 
