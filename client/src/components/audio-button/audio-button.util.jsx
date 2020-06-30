@@ -8,6 +8,8 @@ import { ReactComponent as Shuffle } from '../../assets/icons/shuffle.svg';
 import { ReactComponent as Queue } from '../../assets/icons/list.svg';
 import { ReactComponent as Device } from '../../assets/icons/speaker.svg';
 
+import { updateTime } from '../../redux/likedSongs/likedSongs.actions';
+
 const styles = {
   fill: '#FFFFFA',
 };
@@ -34,5 +36,10 @@ export const selectButton = (buttonName) => {
 };
 
 export const grabTime = () => {
-  console.log('hello');
+  let time = 0;
+
+  setInterval(() => {
+    time += 1;
+    return updateTime(time);
+  }, 1000);
 };
