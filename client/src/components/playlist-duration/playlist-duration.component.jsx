@@ -8,7 +8,7 @@ const PlaylistDuration = () => {
     ({ likedSongs: { likedSongs } }) => likedSongs,
   );
 
-  const [seconds, minutes, hours] = getTime(likedSongsList);
+  const [hours, minutes, seconds] = getTime(likedSongsList);
 
   return (
     <div className="playlist-duration-container">
