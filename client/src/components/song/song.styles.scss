@@ -1,7 +1,7 @@
 .song-container {
   display: grid;
   align-items: center;
-  grid-template-columns: 50px auto 50px;
+  grid-template-columns: 50px auto 80px;
   height: 65px;
   background-color: black;
   color: white;
@@ -59,4 +59,9 @@
 #spacer-dot {
   font-weight: 900;
   padding: 0px 3px;
+}
+
+.song-duration {
+  display: inline-flex;
+  justify-self: flex-end;
 }

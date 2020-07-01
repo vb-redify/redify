@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import './song.styles.scss';
 import { ReactComponent as Play } from '../../assets/icons/play.svg';
 import { ReactComponent as Music } from '../../assets/icons/music.svg';
+import getTime from './song.util';
 
 const Song = ({ song }) => {
   const [songImage, setSongImage] = React.useState('music');
-  const seconds = song.seconds.toString().padStart(2, '0');
+  const [hours, minutes, totalSeconds] = getTime(song);
+  const seconds = totalSeconds.toString().padStart(2, '0');
 
   const styles = {
     music: {
@@ -30,7 +32,11 @@ const Song = ({ song }) => {
       onBlur={() => setSongImage('music')}
     >
       <div className="song-play">
-        {songImage === 'music' ? <Music style={styles.music} /> : <Play style={styles.play} />}
+        {songImage === 'music' ? (
+          <Music style={styles.music} />
+        ) : (
+          <Play style={styles.play} />
+        )}
       </div>
       <div className="song-details">
         <div className="song-title">{song.title}</div>
@@ -41,10 +47,8 @@ const Song = ({ song }) => {
           <div>{song.album}</div>
         </div>
       </div>
-      <div>
-        {song.minutes}
-        :
-        {seconds}
+      <div className="song-duration">
+        {hours > 0 ? `${hours}:${minutes}:${seconds}` : `${minutes}:${seconds}`}
       </div>
     </div>
   );
@@ -56,7 +60,6 @@ Song.propTypes = {
     title: PropTypes.string,
     album: PropTypes.string,
     artist: PropTypes.string,
-    minutes: PropTypes.number,
     seconds: PropTypes.number,
     explicit: PropTypes.bool,
     imageUrl: PropTypes.string,
