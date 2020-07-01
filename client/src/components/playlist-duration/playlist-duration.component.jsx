@@ -8,23 +8,23 @@ const PlaylistDuration = () => {
     ({ likedSongs: { likedSongs } }) => likedSongs,
   );
 
-  const [totalHours, totalMinutes, remainingSeconds] = getTime(likedSongsList);
+  const [seconds, minutes, hours] = getTime(likedSongsList);
 
   return (
     <div className="playlist-duration-container">
-      {totalHours > 0 ? (
+      {hours > 0 ? (
         <div>
-          {totalHours}
-          <span>{totalHours > 1 ? ' hrs ' : ' hr '}</span>
-          {totalMinutes}
-          <span>{totalMinutes > 1 ? ' mins' : ' min'}</span>
+          {hours}
+          <span>{hours > 1 ? ' hrs ' : ' hr '}</span>
+          {minutes}
+          <span>{minutes > 1 ? ' mins' : ' min'}</span>
         </div>
       ) : (
         <div>
-          {totalMinutes}
-          <span>{totalMinutes > 1 ? ' mins ' : ' min'}</span>
-          {remainingSeconds}
-          <span>{remainingSeconds > 1 ? ' secs' : ' sec'}</span>
+          {minutes}
+          <span>{minutes > 1 ? ' mins ' : ' min'}</span>
+          {seconds}
+          <span>{seconds > 1 ? ' secs' : ' sec'}</span>
         </div>
       )}
     </div>

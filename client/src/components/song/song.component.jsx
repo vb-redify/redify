@@ -56,7 +56,6 @@ Song.propTypes = {
     title: PropTypes.string,
     album: PropTypes.string,
     artist: PropTypes.string,
-    minutes: PropTypes.number,
     seconds: PropTypes.number,
     explicit: PropTypes.bool,
     imageUrl: PropTypes.string,
