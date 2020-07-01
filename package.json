@@ -16,7 +16,7 @@
   "scripts": {
     "client": "cd client && npm start",
     "server": "nodemon index.js",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm run build && npm run test",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js"
   },
