@@ -78,7 +78,7 @@ describe('Song', () => {
     expect(musicIcon.exists()).toBe(false);
     expect(playIcon.exists()).toBe(true);
     // check icon when user stops hovering the song
-    wrapper1.simulate('mouseout');
+    wrapper1.simulate('mouseleave');
     musicIcon = wrapper1.find(Music);
     playIcon = wrapper1.find(Play);
     expect(musicIcon.exists()).toBe(true);
