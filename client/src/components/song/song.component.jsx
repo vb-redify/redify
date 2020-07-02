@@ -28,7 +28,7 @@ const Song = ({ song }) => {
       className="song-container"
       onMouseOver={() => setSongImage('play')}
       onFocus={() => setSongImage('play')}
-      onMouseOut={() => setSongImage('music')}
+      onMouseLeave={() => setSongImage('music')}
       onBlur={() => setSongImage('music')}
     >
       <div className="song-play">
