@@ -2,6 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Song from './song.component';
 import Track from '../../models/track';
+import { ReactComponent as Play } from '../../assets/icons/play.svg';
+import { ReactComponent as Music } from '../../assets/icons/music.svg';
 
 describe('Song', () => {
   const exampleSong1 = new Track(
@@ -62,5 +64,24 @@ describe('Song', () => {
   it('Should render an explicit', () => {
     const explicit = wrapper2.find('div.song-explicit');
     expect(explicit.exists()).toBe(true);
+  });
+  it('Should toggle Music and Play icons when user hovers song', () => {
+    // check initial state icon
+    let musicIcon = wrapper1.find(Music);
+    let playIcon = wrapper1.find(Play);
+    expect(musicIcon.exists()).toBe(true);
+    expect(playIcon.exists()).toBe(false);
+    // check mousever state
+    wrapper1.simulate('mouseover');
+    musicIcon = wrapper1.find(Music);
+    playIcon = wrapper1.find(Play);
+    expect(musicIcon.exists()).toBe(false);
+    expect(playIcon.exists()).toBe(true);
+    // check icon when user stops hovering the song
+    wrapper1.simulate('mouseout');
+    musicIcon = wrapper1.find(Music);
+    playIcon = wrapper1.find(Play);
+    expect(musicIcon.exists()).toBe(true);
+    expect(playIcon.exists()).toBe(false);
   });
 });
